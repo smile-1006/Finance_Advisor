@@ -1,6 +1,6 @@
 'use client';
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {generateFinancialTips} from '@/ai/flows/generate-financial-tips';
@@ -42,6 +42,11 @@ export default function Home() {
   const [tips, setTips] = useState<string>('');
 
   const [isGenerating, setIsGenerating] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  useEffect(() => {
+    setVideoLoaded(true);
+  }, []);
 
   const handleGenerateTips = async () => {
     setIsGenerating(true);
@@ -68,13 +73,15 @@ export default function Home() {
         <p className="text-lg text-muted-foreground mb-8">Explore the cosmos of financial possibilities.</p>
         {/* Placeholder for Interactive 3D Hero */}
         <div className="w-full h-64 rounded-lg shadow-md mb-8 overflow-hidden relative">
-          <video
-            src="/finance_abstract.mp4"
-            autoPlay
-            loop
-            muted
-            className="absolute inset-0 w-full h-full object-cover blur-md scale-110"
-          />
+          {videoLoaded && (
+            <video
+              src="/finance_abstract.mp4"
+              autoPlay
+              loop
+              muted
+              className="absolute inset-0 w-full h-full object-cover blur-md scale-110"
+            />
+          )}
           <div className="absolute inset-0 bg-secondary opacity-30"></div>
           <div className="absolute inset-0 flex items-center justify-center text-foreground glassmorphism">
             Interactive 3D Model Here (Coming Soon)
