@@ -64,21 +64,21 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 text-center">
-        <h1 className="text-5xl font-bold text-white mb-4">Welcome to the Financial Multiverse</h1>
-        <p className="text-lg text-gray-300 mb-8">Explore the cosmos of financial possibilities.</p>
+        <h1 className="text-5xl font-bold text-foreground mb-4">Welcome to the Financial Multiverse</h1>
+        <p className="text-lg text-muted-foreground mb-8">Explore the cosmos of financial possibilities.</p>
         {/* Placeholder for Interactive 3D Hero */}
-        <div className="w-full h-64 bg-gray-800 rounded-lg shadow-md mb-8 flex items-center justify-center text-white">
+        <div className="w-full h-64 bg-secondary rounded-lg shadow-md mb-8 flex items-center justify-center text-foreground">
           Interactive 3D Model Here (Coming Soon)
         </div>
-        <Button className="bg-primary text-black">Embark on Your Financial Journey</Button>
+        <Button className="bg-primary text-primary-foreground">Embark on Your Financial Journey</Button>
       </section>
 
       {/* Animated Concept Cards Section */}
       <section className="py-12">
-        <h2 className="text-3xl font-semibold text-white text-center mb-8">Key Financial Concepts</h2>
+        <h2 className="text-3xl font-semibold text-foreground text-center mb-8">Key Financial Concepts</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Example Card */}
-          <Card className="bg-gray-900 text-white hover:scale-105 transition-transform">
+          <Card className="bg-secondary text-foreground hover:scale-105 transition-transform">
             <CardHeader>
               <CardTitle>Diversification</CardTitle>
               <CardDescription>Spread your investments to reduce risk.</CardDescription>
@@ -88,7 +88,7 @@ export default function Home() {
             </CardContent>
           </Card>
           {/* Add more cards here */}
-          <Card className="bg-gray-900 text-white hover:scale-105 transition-transform">
+          <Card className="bg-secondary text-foreground hover:scale-105 transition-transform">
             <CardHeader>
               <CardTitle>Compound Interest</CardTitle>
               <CardDescription>Make your money work for you!</CardDescription>
@@ -97,7 +97,7 @@ export default function Home() {
               Understand the exponential power of compound interest.
             </CardContent>
           </Card>
-          <Card className="bg-gray-900 text-white hover:scale-105 transition-transform">
+          <Card className="bg-secondary text-foreground hover:scale-105 transition-transform">
             <CardHeader>
               <CardTitle>Risk Management</CardTitle>
               <CardDescription>Assess your risk tolerance.</CardDescription>
@@ -111,12 +111,12 @@ export default function Home() {
 
       {/* Persona Cards Section */}
       <section className="py-12">
-        <h2 className="text-3xl font-semibold text-white text-center mb-8">Find Your Financial Persona</h2>
+        <h2 className="text-3xl font-semibold text-foreground text-center mb-8">Find Your Financial Persona</h2>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
           {personaData.map((persona, index) => (
             <Card
               key={index}
-              className="bg-gray-800 text-white p-4 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
+              className="bg-secondary text-foreground p-4 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
             >
               <img src={persona.image} alt={persona.name} className="w-full h-32 object-cover rounded-md mb-2" />
               <CardTitle className="text-xl font-semibold">{persona.name}</CardTitle>
@@ -128,14 +128,14 @@ export default function Home() {
 
       {/* AI Financial Advisor Section */}
       <section className="py-12">
-        <h2 className="text-3xl font-semibold text-white text-center mb-8">AI Financial Advisor</h2>
+        <h2 className="text-3xl font-semibold text-foreground text-center mb-8">AI Financial Advisor</h2>
         <div className="max-w-3xl mx-auto">
           <div className="mb-4">
-            <label className="block text-gray-300 text-sm font-bold mb-2" htmlFor="age">
+            <label className="block text-muted-foreground text-sm font-bold mb-2" htmlFor="age">
               Age:
             </label>
             <Input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-foreground leading-tight focus:outline-none focus:shadow-outline"
               id="age"
               type="number"
               value={age}
@@ -143,11 +143,11 @@ export default function Home() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-300 text-sm font-bold mb-2" htmlFor="income">
+            <label className="block text-muted-foreground text-sm font-bold mb-2" htmlFor="income">
               Annual Income:
             </label>
             <Input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-foreground leading-tight focus:outline-none focus:shadow-outline"
               id="income"
               type="number"
               value={income}
@@ -155,21 +155,21 @@ export default function Home() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-300 text-sm font-bold mb-2" htmlFor="goals">
+            <label className="block text-muted-foreground text-sm font-bold mb-2" htmlFor="goals">
               Financial Goals:
             </label>
             <Textarea
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-foreground leading-tight focus:outline-none focus:shadow-outline"
               id="goals"
               value={goals}
               onChange={(e) => setGoals(e.target.value)}
             />
           </div>
-          <Button className="bg-accent text-white" onClick={handleGenerateTips} disabled={isGenerating}>
+          <Button className="bg-accent text-accent-foreground" onClick={handleGenerateTips} disabled={isGenerating}>
             {isGenerating ? 'Generating Tips...' : 'Get Personalized Tips'}
           </Button>
           {tips && (
-            <div className="mt-8 p-4 bg-gray-800 rounded-lg text-white">
+            <div className="mt-8 p-4 bg-secondary rounded-lg text-foreground">
               <h3 className="text-xl font-semibold mb-2">Your Personalized Financial Tips:</h3>
               <p>{tips}</p>
             </div>
@@ -179,12 +179,12 @@ export default function Home() {
 
       {/* Chatbot Section */}
       <section className="py-12 text-center">
-        <h2 className="text-3xl font-semibold text-white mb-4">Chatbot</h2>
-        <p className="text-lg text-gray-300">Coming Soon: Your Personalized AI Assistant</p>
+        <h2 className="text-3xl font-semibold text-foreground mb-4">Chatbot</h2>
+        <p className="text-lg text-muted-foreground">Coming Soon: Your Personalized AI Assistant</p>
       </section>
 
       {/* Informational Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-6 text-center">
+      <footer className="bg-secondary text-muted-foreground py-6 text-center">
         <p>
           <a href="#" className="hover:text-primary mx-2">Terms of Service</a>
           <a href="#" className="hover:text-primary mx-2">Privacy Policy</a>
