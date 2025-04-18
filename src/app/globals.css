@@ -8,8 +8,8 @@ body {
 
 @layer base {
   :root {
-    --background: 240 10% 13%;  /* Dark gradient background */
-    --foreground: 0 0% 98%;
+    --background: 220 13% 91%;  /* Light gradient background */
+    --foreground: 240 5.3% 26.1%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
@@ -43,7 +43,7 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 240 10% 13%; /* Dark gradient background */
+    --background: 224.3 76.3% 48%; /* Dark gradient background */
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -78,7 +78,7 @@ body {
   }
 
   body {
-    @apply bg-gradient-to-b from-[#121212] to-[#212121]; /* Apply gradient to body */
+    @apply bg-gradient-to-b from-[#f0f0f0] to-[#ffffff]; /* Apply gradient to body */
   }
 }
 
