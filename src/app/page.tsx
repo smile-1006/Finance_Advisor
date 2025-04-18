@@ -1,3 +1,4 @@
+
 'use client';
 
 import {useState} from 'react';
@@ -67,7 +68,7 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-foreground mb-4">Welcome to the Financial Multiverse</h1>
         <p className="text-lg text-muted-foreground mb-8">Explore the cosmos of financial possibilities.</p>
         {/* Placeholder for Interactive 3D Hero */}
-        <div className="w-full h-64 bg-secondary rounded-lg shadow-md mb-8 flex items-center justify-center text-foreground">
+        <div className="w-full h-64 bg-secondary rounded-lg shadow-md mb-8 flex items-center justify-center text-foreground glassmorphism">
           Interactive 3D Model Here (Coming Soon)
         </div>
         <Button className="bg-primary text-primary-foreground">Embark on Your Financial Journey</Button>
@@ -78,7 +79,7 @@ export default function Home() {
         <h2 className="text-3xl font-semibold text-foreground text-center mb-8">Key Financial Concepts</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Example Card */}
-          <Card className="bg-secondary text-foreground hover:scale-105 transition-transform">
+          <Card className="text-foreground hover:scale-105 transition-transform glassmorphism">
             <CardHeader>
               <CardTitle>Diversification</CardTitle>
               <CardDescription>Spread your investments to reduce risk.</CardDescription>
@@ -88,7 +89,7 @@ export default function Home() {
             </CardContent>
           </Card>
           {/* Add more cards here */}
-          <Card className="bg-secondary text-foreground hover:scale-105 transition-transform">
+          <Card className="text-foreground hover:scale-105 transition-transform glassmorphism">
             <CardHeader>
               <CardTitle>Compound Interest</CardTitle>
               <CardDescription>Make your money work for you!</CardDescription>
@@ -97,7 +98,7 @@ export default function Home() {
               Understand the exponential power of compound interest.
             </CardContent>
           </Card>
-          <Card className="bg-secondary text-foreground hover:scale-105 transition-transform">
+          <Card className="text-foreground hover:scale-105 transition-transform glassmorphism">
             <CardHeader>
               <CardTitle>Risk Management</CardTitle>
               <CardDescription>Assess your risk tolerance.</CardDescription>
@@ -116,7 +117,7 @@ export default function Home() {
           {personaData.map((persona, index) => (
             <Card
               key={index}
-              className="bg-secondary text-foreground p-4 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
+              className="text-foreground p-4 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer glassmorphism"
             >
               <img src={persona.image} alt={persona.name} className="w-full h-32 object-cover rounded-md mb-2" />
               <CardTitle className="text-xl font-semibold">{persona.name}</CardTitle>
@@ -129,7 +130,7 @@ export default function Home() {
       {/* AI Financial Advisor Section */}
       <section className="py-12">
         <h2 className="text-3xl font-semibold text-foreground text-center mb-8">AI Financial Advisor</h2>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto glassmorphism p-6 rounded-lg">
           <div className="mb-4">
             <label className="block text-muted-foreground text-sm font-bold mb-2" htmlFor="age">
               Age:
@@ -184,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* Informational Footer */}
-      <footer className="bg-secondary text-muted-foreground py-6 text-center">
+      <footer className="text-muted-foreground py-6 text-center glassmorphism">
         <p>
           <a href="#" className="hover:text-primary mx-2">Terms of Service</a>
           <a href="#" className="hover:text-primary mx-2">Privacy Policy</a>
