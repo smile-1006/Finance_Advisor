@@ -17,6 +17,10 @@
 /.next/
 /out/
 
+//.env
+.env
+
+
 # production
 /build
 
@@ -38,3 +42,4 @@ yarn-error.log*
 next-env.d.ts
 
 .genkit/*
+
