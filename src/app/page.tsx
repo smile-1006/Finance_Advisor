@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import {useState} from 'react';
@@ -65,13 +66,13 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 text-center">
-        <h1 className="text-5xl font-bold text-foreground mb-4">Welcome to the Financial Multiverse</h1>
+        <h1 className="text-5xl font-bold text-foreground mb-4 neon-glow">Welcome to the Financial Multiverse</h1>
         <p className="text-lg text-muted-foreground mb-8">Explore the cosmos of financial possibilities.</p>
         {/* Placeholder for Interactive 3D Hero */}
         <div className="w-full h-64 bg-secondary rounded-lg shadow-md mb-8 flex items-center justify-center text-foreground glassmorphism">
           Interactive 3D Model Here (Coming Soon)
         </div>
-        <Button className="bg-primary text-primary-foreground">Embark on Your Financial Journey</Button>
+        <Button className="glassmorphism">Embark on Your Financial Journey</Button>
       </section>
 
       {/* Animated Concept Cards Section */}
@@ -166,7 +167,7 @@ export default function Home() {
               onChange={(e) => setGoals(e.target.value)}
             />
           </div>
-          <Button className="bg-accent text-accent-foreground" onClick={handleGenerateTips} disabled={isGenerating}>
+          <Button className="glassmorphism" onClick={handleGenerateTips} disabled={isGenerating}>
             {isGenerating ? 'Generating Tips...' : 'Get Personalized Tips'}
           </Button>
           {tips && (

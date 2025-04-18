@@ -10,11 +10,11 @@ body {
   :root {
     --background: #f0f0f0; /* Anti-Flash White - Slightly darker */
     --foreground: #141414; /* Black */
-    --card: #f0f0f0; /* Light Lavender Blush-ish - Lighter */
+    --card: #ffffff; /* White */
     --card-foreground: #141414; /* Black */
-    --popover: #f0f0f0; /* Light Lavender Blush-ish - Lighter */
+    --popover: #ffffff; /* White */
     --popover-foreground: #141414; /* Black */
-    --primary: #8dbf41; /* 8dbf41 converted to HSL */
+    --primary: #f0f8ff; /* Alice Blue */
     --primary-foreground: #141414; /* Black */
     --secondary: #dcc8f0; /* Soap (#dcc8f0) - Lighter */
     --secondary-foreground: #141414; /* Black */
@@ -41,38 +41,10 @@ body {
     --sidebar-accent-foreground: #141414; /* Black */
     --sidebar-border: #f0f8ff; /* Alice Blue - Lighter */
     --sidebar-ring: #141414; /* Black */
-
-    /* Additional vibrant colors */
-    --vibrant-1: #bf0404; /* Gold */
-    --vibrant-2: #0378a6; /* Cyan */
-    --vibrant-3: #8dbf41; /* Pink */
   }
 
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-    body {
-    @apply bg-gradient-to-br from-[hsl(var(--vibrant-1))] to-[hsl(var(--vibrant-2))] via-[hsl(var(--vibrant-3))] animate-gradient;
-    background-size: 400% 400%;
-  }
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .animate-gradient {
-    animation: gradient 15s ease infinite;
   }
 }
 
@@ -84,4 +56,12 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Neon glow effect */
+.neon-glow {
+  text-shadow:
+    0 0 5px rgba(0, 255, 255, 0.7),
+    0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(0, 255, 255, 0.3);
 }
